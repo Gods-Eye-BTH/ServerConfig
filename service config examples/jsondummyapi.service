@@ -1,0 +1,14 @@
+[Unit]
+Description=JSON Dummy API
+After=network.target nginx.service
+
+[Service]
+User=godseye
+Group=godseye
+Type=simple
+Restart=on-failure
+ExecStart=go run /home/godseye/dummyapi/main.go
+
+[Install]
+
+WantedBy=multi-user.target

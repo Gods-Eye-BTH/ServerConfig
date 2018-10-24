@@ -1,0 +1,14 @@
+[Unit]
+Description=NodeJS Stream Server
+After=network.target nginx.service
+
+[Service]
+User=godseye
+Group=godseye
+Type=simple
+Restart=on-failure
+ExecStart=/usr/bin/node /home/godseye/streamserver/app.js
+
+[Install]
+
+WantedBy=multi-user.target

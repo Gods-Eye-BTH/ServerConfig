@@ -1,0 +1,14 @@
+[Unit]
+Description=Demo Stream: Charlie Chaplin
+After=network.target streamserver.service
+
+[Service]
+User=godseye
+Group=godseye
+Type=simple
+Restart=always
+ExecStart=ffmpeg -re -i /home/godseye/streamserver/chaplin.mp4 -c copy -f flv rtmp://localhost/live/eye
+
+[Install]
+
+WantedBy=multi-user.target
