@@ -9,7 +9,7 @@ This set of instructions has been tested on ubuntu 18 but should work on most in
 (some steps may vary depending on your OS, feel free to contribute with instructions)
 
 ### Step 1: Server Requirements
-You need to have a server that you can access over ssh and reach over port 80 and 443.
+You need to have a server that you can access over ssh and reach over port 80 (HTTP), 443 (HTTPS) and 1935 (RTMP).
 Note that depending on how much you scale up this project it may require more processing
 power.
 
