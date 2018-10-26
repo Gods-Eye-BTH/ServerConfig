@@ -3,6 +3,9 @@
 This is the server configuration instructions and documentation repo.
 API documentation can be found in the file [API_DOC.md](/API_DOC.md).
 
+Instructions on how to stream to the server can be found in the file [STREAMING.md](/STREAMING.md)
+
+
 ## Setting up a God's Eye Server
 
 This set of instructions has been tested on ubuntu 18 but should work on most installs
@@ -54,7 +57,11 @@ You may need to customize it based on what you're already are running.
 
 Install a SSL-TLS certificate from Let's Encrypt with [Certbot](https://certbot.eff.org/)
 
-### Step 6: Dummy api (optional)
+### Step 6: Dummy streams (optional)
+
+**TODO: Write documentation for setting up example streams**
+
+### Step 7: Dummy api (optional)
 
 If you want to run the dummy api on the server you'll need to setup your [GOPATH](https://golang.org/doc/code.html#GOPATH).  
 Then install the go package gorilla/mux by running `go get github.com/gorilla/mux`.  
