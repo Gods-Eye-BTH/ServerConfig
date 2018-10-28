@@ -7,7 +7,7 @@ User=godseye
 Group=godseye
 Type=simple
 Restart=on-failure
-ExecStart=/usr/bin/node /home/godseye/streamserver/app.js
+ExecStart=/bin/sh -c "cd /home/godseye/streamserver/ && /usr/bin/node /home/godseye/streamserver/app.js"
 
 [Install]
 

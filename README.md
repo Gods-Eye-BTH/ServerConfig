@@ -44,11 +44,15 @@ Install the required node modules: `npm install`
 ### Step 4: Set up services
 
 Edit the example service configs provided in this repo to match your paths
-and services you want to run.
+and services you want to run. Please note that full paths are required.
 
 Now place the .service files in `/etc/systemd/system/`
 
-Start the services: `sudo service start <servicename>.service` where <servicename> is the name of your service.
+Reload so systemd can find your service `sudo systemctl daemon-reload`
+
+Start the services: `sudo service <servicename> start` where <servicename> is the name of your service.
+
+run the command `sudo service <servicename> status` to check if it is running properly
 
 ### Step 5: Nginx config
 
