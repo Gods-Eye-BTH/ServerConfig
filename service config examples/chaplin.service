@@ -7,7 +7,7 @@ User=godseye
 Group=godseye
 Type=simple
 Restart=always
-ExecStart=ffmpeg -re -i /home/godseye/streamserver/chaplin.mp4 -c copy -f flv rtmp://localhost/live/eye
+ExecStart=/bin/sh -c "ffmpeg -re -i /home/godseye/streamserver/chaplin.mp4 -c copy -f flv rtmp://localhost/live/eye"
 
 [Install]
 

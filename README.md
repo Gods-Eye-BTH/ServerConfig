@@ -69,7 +69,12 @@ Install a SSL-TLS certificate from Let's Encrypt with [Certbot](https://certbot.
 
 ### Step 6: Dummy streams (optional)
 
-**TODO: Write documentation for setting up example streams**
+The dummy streams works the same as regular streams but point to the localhost url instead
+and the input can be either a camera or an mp4 video with h264 video and AAC audio.
+
+Setting up regular streams is documented in the [STREAMING.md](STREAMING.md) file.
+
+The streams can be automated to loop with a quick bash script or run as a always restarting systemd service.
 
 ### Step 7: Dummy api (optional)
 
