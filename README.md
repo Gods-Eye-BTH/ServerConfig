@@ -56,10 +56,16 @@ run the command `sudo service <servicename> status` to check if it is running pr
 
 ### Step 5: Nginx config
 
-now copy over the nginx config from this repo to your nginx.
-You may need to customize it based on what you're already are running.
+Your nginx config should be located in `/etc/nginx/sites-available/`
+the default config file is called `default`.
 
-Install a SSL-TLS certificate from Let's Encrypt with [Certbot](https://certbot.eff.org/)
+edit this config (or if you have a custom config edit that one) to add
+the location /stream/ as a reverse proxy for the Node Media Server. An example is
+available in this repo under [nginx_config/default](/nginx_config/default).
+
+Install a SSL-TLS certificate from Let's Encrypt with [Certbot](https://certbot.eff.org/)*
+
+\* *Note that this only works with machines that has an external ip*
 
 ### Step 6: Dummy streams (optional)
 
@@ -70,5 +76,8 @@ Install a SSL-TLS certificate from Let's Encrypt with [Certbot](https://certbot.
 If you want to run the dummy api on the server you'll need to setup your [GOPATH](https://golang.org/doc/code.html#GOPATH).  
 Then install the go package gorilla/mux by running `go get github.com/gorilla/mux`.  
 
-Config and set up the service for the dummy api and then start it. Note that you also need
-to make sure you have the api route configured in your nginx config
+After that you need to set it up as a service. Unfortunately the service file for the
+dummy API that is provided in this repo doesn't really work.
+
+Configure your nginx to add the location /api/ as a reverse proxy for the api.
+There is an example of this configuration in this repo under [nginx_config/default](/nginx_config/default).

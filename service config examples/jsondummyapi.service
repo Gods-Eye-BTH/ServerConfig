@@ -7,7 +7,7 @@ User=godseye
 Group=godseye
 Type=simple
 Restart=on-failure
-ExecStart=go run /home/godseye/dummyapi/main.go
+ExecStart=/usr/bin/go run /home/godseye/dummyapi/main.go
 
 [Install]
 
