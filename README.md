@@ -54,6 +54,14 @@ Start the services: `sudo service <servicename> start` where <servicename> is th
 
 run the command `sudo service <servicename> status` to check if it is running properly
 
+## Alternative step 4: other ways of running things
+
+You can set up crontabs with the things you want to start when the system starts:
+`@reboot <your command here>`
+
+If you want a highly temporary setup you can just open a tmux and run a command in there
+and then detach it. Please note that it will not start up after a reboot.
+
 ### Step 5: Nginx config
 
 Your nginx config should be located in `/etc/nginx/sites-available/`
